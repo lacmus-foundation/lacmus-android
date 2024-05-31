@@ -17,6 +17,18 @@ todo
 - ${\color{red}Red}$ - processed, found people. 
 - ${\color{green}Green}$ - processed, not found people. 
 - ${\color{gray}Gray}$ - processing in progress.
-5. Click on image, and you can see in in fullsrceen, zoom and swap. 
+5. Click on image, and you can see it in the fullscreen, zoom and swap. 
 6. To exit application just click back button few times. 
 
+## Developer zone
+
+We use recommended app [architecture](https://developer.android.com/topic/architecture#recommended-app-arch).  
+
+![Application acrchitecture](doc/arch.jpg)
+
+We use recommended model [EfficientDet-Lite0](https://www.tensorflow.org/lite/android/tutorials/object_detection).   
+
+We use tflite model maker for finetune object detection model on custom lacmus dataset with [this](https://www.tensorflow.org/lite/models/modify/model_maker/object_detection) tutorial. 
+Original lacmus high dimension images adopted to small model input: resized and crops to 3x4=12 items with 320x320 size.   
+
+Crop and resize also applied to input images in the Lacmus Android application.  
