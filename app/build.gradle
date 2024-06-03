@@ -11,7 +11,7 @@ android {
     defaultConfig {
         applicationId "ml.lacmus.lacmusandroid"
         minSdk 21
-        targetSdk 32
+        targetSdk 34
         versionCode 4
         versionName "0.2"
 
@@ -22,6 +22,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
     }
     buildFeatures {
@@ -40,6 +41,7 @@ android {
     aaptOptions {
         noCompress "tflite"
     }
+    namespace 'ml.lacmus.lacmusandroid'
 }
 
 dependencies {
